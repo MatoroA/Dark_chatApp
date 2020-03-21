@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/inputs_layout"
+        android:layout_marginBottom="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:id="@+id/app_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/prompt_message"
+        android:text="@string/contact_number_prompt"
+        android:layout_below="@id/app_name"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:id="@+id/inputs_layout"
+        android:gravity="center">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/country_code"
+            android:gravity="end"
+            android:minWidth="40dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:focusable="false"
+            android:layout_toLeftOf="@id/contact"
+            android:layout_toStartOf="@id/contact"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/contact"
+            android:hint="65 930 3033"
+            android:inputType="phone"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/code"
+            android:hint="6 digits code"
+            android:ems="6"
+            android:maxEms="6"
+            android:inputType="phone"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/time"-->
+<!--        android:text="12"-->
+<!--        android:layout_marginLeft="12dp"-->
+<!--        android:layout_below="@id/inputs_layout"-->
+<!--        android:layout_centerHorizontal="true"/>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/seonds"-->
+<!--        android:text="seconds left"-->
+<!--        android:layout_marginLeft="12dp"-->
+<!--        android:layout_toRightOf="@id/time"-->
+<!--        android:layout_below="@id/inputs_layout"/>-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_contact"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="NEXT"
+        android:padding="15dp"
+        android:layout_below="@id/inputs_layout"
+        android:layout_centerInParent="true"/>
+
+    <include
+        layout="@layout/spinner_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

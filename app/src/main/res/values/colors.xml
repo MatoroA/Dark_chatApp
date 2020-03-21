@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="white">#FFF</color>
+    <color name="text_color">#ABABAD</color>
+
+    <color name="bgBottomNavigatiom">#343539</color>
+    <color name="icon_color">#00BE50</color>
+
+    <color name="textColorGreen">#03ae4f</color>
+    <color name="textColorGrey">#757577</color>
+    <color name="userNameColor">#95959B</color>
+    <color name="blackBg">#212226</color>
+    <color name="bottomNav">#2f3034</color>
+
+<!--    Activity chat -->
+    <color name="messageBoxBg">#343539</color>
+</resources>

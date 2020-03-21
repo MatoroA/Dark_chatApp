@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:background="@color/blackBg"
+    android:padding="4dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:id="@+id/pro_pic"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="9dp"
+        android:id="@+id/offline"
+        android:background="@drawable/offline"
+        android:layout_toRightOf="@id/pro_pic"
+        android:layout_marginLeft="-15dp"
+        android:layout_marginBottom="7dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="9dp"
+        android:id="@+id/online"
+        android:background="@drawable/online"
+        android:layout_toRightOf="@id/pro_pic"
+        android:layout_marginLeft="-15dp"
+        android:layout_marginBottom="7dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:id="@+id/new_message_count"
+        android:text="5"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="22dp"
+        android:background="@drawable/new_message_count_bg"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear_layout"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="10dp"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name_text"
+            android:text="Andani matoro"
+            android:textColor="@color/userNameColor"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/last_text"
+            android:text="Andani matoro"
+            android:textColor="@color/textColorGrey"
+            android:layout_marginTop="2dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/userNameColor"
+        android:alpha="0.3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="60dp"/>
+
+</RelativeLayout>

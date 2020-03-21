@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">8ta dah!</string>
+
+    <!--    first screen -->
+    <string name="contact_number_prompt">
+        Enter your cell number, we will send you the sms to verify it!
+    </string>
+    
+    <string name="cancel">CANCEL</string>
+    <string name="save">SAVE</string>
+
+    <string-array name="countries">
+        <item>South Africa</item>
+        <item>Botswana</item>
+        <item>Zimbabwe</item>
+    </string-array>
+
+    <string-array name="codes">
+        <item>ZA</item>
+        <item>BWA</item>
+        <item>ZWE</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

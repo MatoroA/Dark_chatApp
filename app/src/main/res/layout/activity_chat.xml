@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blackBg"
+    tools:context=".ChatActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="@color/blackBg"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            app:layout_collapseMode="pin">
+
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:layout_width="25dp"-->
+<!--                android:layout_height="25dp"-->
+<!--                android:src="@mipmap/ic_launcher"/>-->
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/back"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_navigate_before"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_username"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name_text"
+                    android:text="Andani Matoro"
+                    android:textSize="16sp"
+                    android:textColor="@color/userNameColor"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/status"
+                    android:text="Online"
+                    android:textColor="@color/textColorGrey"/>
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"
+        android:layout_below="@id/appbar"
+        android:layout_above="@id/inputs_layout"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:scrollbars="vertical"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputs_layout"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/message_field"
+            android:hint="Type message..."
+            android:background="@drawable/message_edittext_bg"
+            android:maxHeight="80dp"
+            android:minHeight="50dp"
+            android:scrollbars="vertical"
+            android:padding="4dp"
+            android:textColor="@color/textColorGrey"
+            android:textColorHint="@color/textColorGrey"
+            android:layout_weight="0.8"/>
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:id="@+id/send_message"
+            android:background="@drawable/ic_send"
+            android:layout_gravity="bottom"/>
+    </LinearLayout>
+
+</RelativeLayout>
